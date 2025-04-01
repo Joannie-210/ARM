@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components; 
+@tailwind utilities;
+
+@layer utilities {
+  .bg-custom-gradient {
+    background: linear-gradient(to right, black, rgb(182, 129, 255));
+  }
+}
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-50px) translateX(10px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+.glass-bg {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(35px);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.floating-circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(182, 129, 255, 0.3), rgba(0, 0, 0, 0));
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out;
+}
+.transnav {
+  background: radial-gradient(circle, rgba(182, 129, 255, 0.3), rgba(0, 0, 0, 0));
+}
+@font-face {
+  font-family: cursive;
+  src: url('../src/assets/Playwrite_HU/static/PlaywriteHU-Regular.ttf');
+}
+.font-logo {
+  font-family: cursive;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, black, #C4A000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.floating-circle:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation-duration: 7s;
+}
+
+.floating-circle:nth-child(2) {
+  top: 60%;
+  right: 20%;
+  animation-duration: 9s;
+}
